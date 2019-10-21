@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.yt8492.dirtycode.data.json.ArticleJson
+import com.yt8492.dirtycode.data.model.Article
 
-class ArticleListAdapter : ListAdapter<ArticleJson, ArticleListViewHolder>(CALLBACK) {
+class ArticleListAdapter : ListAdapter<Article, ArticleListViewHolder>(CALLBACK) {
 
     var onArticleClickListener: OnArticleClickListener? = null
 
@@ -24,12 +24,12 @@ class ArticleListAdapter : ListAdapter<ArticleJson, ArticleListViewHolder>(CALLB
     }
 
     companion object {
-        private val CALLBACK = object : DiffUtil.ItemCallback<ArticleJson>() {
-            override fun areItemsTheSame(oldItem: ArticleJson, newItem: ArticleJson): Boolean {
+        private val CALLBACK = object : DiffUtil.ItemCallback<Article>() {
+            override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean {
                 return oldItem.id == newItem.id
             }
 
-            override fun areContentsTheSame(oldItem: ArticleJson, newItem: ArticleJson): Boolean {
+            override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean {
                 return oldItem == newItem
             }
         }

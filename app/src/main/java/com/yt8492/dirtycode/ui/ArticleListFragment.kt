@@ -11,13 +11,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yt8492.dirtycode.R
-import com.yt8492.dirtycode.data.json.ArticleJson
+import com.yt8492.dirtycode.data.model.Article
 import com.yt8492.dirtycode.databinding.FragmentArticleListBinding
 
 class ArticleListFragment : Fragment() {
 
     private val onArticleClickListener = object : OnArticleClickListener {
-        override fun onClick(article: ArticleJson?) {
+        override fun onClick(article: Article?) {
             article?.let {
                 val tabsIntent = CustomTabsIntent.Builder()
                     .setShowTitle(true)

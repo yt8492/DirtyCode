@@ -1,4 +1,4 @@
-package com.yt8492.dirtycode.data
+package com.yt8492.dirtycode.data.api
 
 import com.yt8492.dirtycode.data.json.ArticleJson
 import retrofit2.http.GET

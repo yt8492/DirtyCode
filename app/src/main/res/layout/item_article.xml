@@ -5,7 +5,7 @@
     <data>
         <variable
             name="article"
-            type="com.yt8492.dirtycode.data.json.ArticleJson" />
+            type="com.yt8492.dirtycode.data.model.Article" />
     </data>
 
     <LinearLayout
